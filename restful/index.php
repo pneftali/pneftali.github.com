@@ -5,6 +5,11 @@
 <link rel='stylesheet' href='./css/bootstrap.css' type='text/css' media='all' />
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.min.js'></script>
 <script type='text/javascript' src='./js/bootstrap.min.js'></script>
+<?php if( isset($_POST['password']) ) : ?>
+<script>
+	var pass = <?php echo '"'.$_POST['password'].'"'; ?>;
+</script>
+<?php endif; ?>
 </head>
 
 <body>
@@ -84,7 +89,7 @@
 	    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 	    		<h3 id="myModalLabel">Choose your Pokemon</h3>
   			</div>
-  			<form action="" method='POST' id="contact-form" class="form-horizontal" style='margin:0;'>
+  			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='POST' id="contact-form" class="form-horizontal" style='margin:0;'>
   			<div class="modal-body">   				
   				<fieldset>	
 	  				<div class="control-group">
