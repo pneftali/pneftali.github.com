@@ -1,8 +1,8 @@
 <div class="item-wrap clearfix">
 <div class="mini specifics">
-	<a class="posted"><i class="icon-clock-2"></i>&nbsp; jan 12, 2013</a>
-	<a class="posted-by"><i class="icon-camera-3"></i>&nbsp; john</a>
-	<a class="posted-loc"><i class="icon-map-pin-fill"></i>&nbsp; location</a>
+	<a class="posted"><i class="icon-clock-2"></i>&nbsp; <%= posted_date %></a>
+	<a class="posted-by"><i class="icon-camera-3"></i>&nbsp; <%= posted_by %></a>
+	<a class="posted-loc"><i class="icon-map-pin-fill"></i>&nbsp; <%= posted_location %></a>
 </div>
 
 <div class="ftd-box">		  
@@ -11,25 +11,25 @@
 			<div class="collage box-600 pull-left">						
 				<div class='top'>            
 					<div class="img-wrap wrap-main">
-						<img class="collage-main" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                
+						<img class="collage-main" src="<%= img_main %>">                
 					</div>
 					<div class="img-wrap wrap-square">
-						<img class="collage-square" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                  
+						<img class="collage-square" src="<%= img_0 %>">                  
 					</div>
 					<div class="img-wrap wrap-square">
-						<img class="collage-square" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                  
+						<img class="collage-square" src="<%= img_1 %>">                  
 					</div>
 				</div><!-- end top -->
 
 				<div class='btm'>  
 					<div class="img-wrap wrap-square">
-						<img class="collage-square" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                  
+						<img class="collage-square" src="<%= img_2 %>">                  
 					</div>
 					<div class="img-wrap wrap-square">
-						<img class="collage-square" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                
+						<img class="collage-square" src="<%= img_3 %>">                
 					</div>
 					<div class="img-wrap wrap-square">
-						<img class="collage-square" src="./assets/img/featured/urban-homes/primary_homes_1.jpg">                
+						<img class="collage-square" src="<%= img_4 %>">                
 					</div>
 				</div><!-- end btm -->
 			</div>                  
@@ -40,22 +40,8 @@
 <div class="c-box-right collage">
 	<div class="info-box">
 		<div class="info-content box">
-			<h3>Urban Homes - Tipolo</h3>
-			<p>
-				Limited parking slots available with a total number of 257 parking spaces.
-			</p>
-			<p>Room height is 2.4 meters high.</p>
-			<p>
-				For inquiries and assistance contact:
-				Jan Michael Santos
-				Real Estate Salesperson 
-				Broker: Krismond Ian Y. Guan PRC Lic. No. 5721
-				Cellphone:(Smart) 0947-8243299
-				(Sun) 0932-3413033
-				Mail: pabahaysacebu@yahoo.com
-			</p>
-			<span class="fbl-box"><fb:like href="http://beta.kubo.loc/" send="false" layout="button_count" show_faces="false"></fb:like></span>
-			<a class="more" href="/condo">more... <i class="icon-arrow-right-7"> </i></a>
+			<h3><%= place_name %></h3>
+			<p><%= place_details %></p>			
 		</div>
 	</div>
 </div><!-- end right side box -->

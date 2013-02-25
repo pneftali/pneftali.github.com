@@ -24,9 +24,7 @@ define([
 		
 		render: function( model ){		  
 			
-			console.log( model );	 
-			
-			this.$el.append(this.template).hide().fadeIn();
+			this.$el.append(this.template(model.attributes)).hide().fadeIn();
 			
 		},
 		
