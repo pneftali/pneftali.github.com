@@ -4,33 +4,27 @@ define([
     'underscore',
     'backbone',
     'views/index/IndexView',
+	'views/submit/SubmitView',
 	'collections/PlacesCollections'
-], function($, _, Backbone, IndexView, PlacesCollections) {
+], function($, _, Backbone, IndexView, SubmitView, PlacesCollections) {
 	'use strict';
 	
-    var AppRouter = Backbone.Router.extend({
-        routes: {
-          
-            // Default
-            '': 'index'
-        }
-    });
-  
-    var initialize = function(){
-
-        var app_router = new AppRouter;    
-
-        app_router.on('route:index', function (actions) {
-         
+    var Workspace = Backbone.Router.extend({
+        routes: {          
+            '': 'index',
+			'submit': 'submit'			
+        },
+		
+		index: function(){
 			var view = new IndexView({collection: PlacesCollections});
-
-        });    
-
-        Backbone.history.start();
-        
-    };
+		},
+		
+		submit: function(){
+			console.log('hey');
+			var view = new SubmitView();
+			view.render();
+		}
+    });  
   
-    return { 
-        initialize: initialize
-    };
+    return Workspace;
 });

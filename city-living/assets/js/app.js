@@ -7,7 +7,8 @@ define([
 	
 	var initialize = function(){
 		
-		Router.initialize();
+		new Router();
+		Backbone.history.start();
 
 	};
 
