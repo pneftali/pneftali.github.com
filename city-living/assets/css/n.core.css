@@ -1660,6 +1660,10 @@ Progress control. */
   #fancybox-loading {
     /*background-image: url('fancybox_sprite.png');*/ 
   }
+  
+.fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background-image: url('fancybox_sprite.png');
+}
 
   #fancybox-loading {
     position: fixed;
