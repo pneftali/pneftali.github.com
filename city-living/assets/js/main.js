@@ -3,8 +3,8 @@ require.config({
         jquery      : 'libs/jquery/jquery',
         underscore  : 'libs/underscore/underscore-min',
         backbone    : 'libs/backbone/backbone-min',
-		handlebars	: 'libs/handlebars/handlebar',
         bootstrap   : 'libs/bootstrap/bs-popover.min',
+		fancybox   	: 'libs/jquery/jquery.fancybox.pack',
         templates   : '../templates'
     },
     shim: {
@@ -13,7 +13,7 @@ require.config({
 			deps: ['jquery','underscore'],
 			exports: 'Backbone'
 		},
-		'handlebar': { exports: 'Handlebars' }
+		'fancybox': { deps: ['jquery'], exports: 'fancybox' }
     }
 });
  

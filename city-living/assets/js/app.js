@@ -2,14 +2,20 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'router'
-], function($, _, Backbone, Router, Data){
+	'router',
+	'fancybox'
+], function($, _, Backbone, Router, fancybox){
 	
 	var initialize = function(){
 		
 		new Router();
 		Backbone.history.start();
-
+		
+		$(".img-wrap a").fancybox({
+				helpers   : {
+				title : { type : 'inside' }
+			}            
+		});
 	};
 
 	return {
