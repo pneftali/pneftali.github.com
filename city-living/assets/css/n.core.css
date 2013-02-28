@@ -1658,7 +1658,7 @@ Progress control. */
   }
 
   #fancybox-loading {
-    background-image: url('fancybox_sprite.png');
+    /*background-image: url('fancybox_sprite.png');*/ 
   }
 
   #fancybox-loading {
