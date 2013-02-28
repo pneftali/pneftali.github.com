@@ -69,6 +69,18 @@
     .icon-facebook:before { content: "\e08f"; }
     .icon-arrow-right-7:before { content: "\e067"; }   
 
+/* FBox navs and close
+ *==============*/
+ .icon-arrow-6:before {
+  content: "\e0f1";
+}
+.icon-arrow-9:before {
+  content: "\e0f4";
+}
+.icon-cancel-2:before {
+  content: "\e03a";
+}
+ 
 /* Links
  *==============*/
   a { text-decoration: none; }
