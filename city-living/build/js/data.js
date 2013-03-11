@@ -1,0 +1,1 @@
+define(["jquery","underscore","backbone","collections/PlacesCollections"],function(e,t,n,r){var i=function(){var e=new r;e.url="https://spreadsheets.google.com/feeds/list/0AgqfsL1VSIfidGN1TmlGdGFGb0QxSmJfbjlWSjkxbUE/od6/public/values?alt=json-in-script&callback=?",e.fetch()};return{fetch:i}});

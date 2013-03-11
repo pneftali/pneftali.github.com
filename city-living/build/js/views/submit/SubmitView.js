@@ -1,0 +1,1 @@
+define("views/submit/SubmitView",["text!templates/submit/submitTemplate.html"],function(e){var t=Backbone.View.extend({el:$(".places-main"),template:_.template(e),initialize:function(){},render:function(){this.$el.html(this.template).hide().fadeIn()}});return t});

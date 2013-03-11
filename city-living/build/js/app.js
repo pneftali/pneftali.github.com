@@ -1,0 +1,1 @@
+define("app",["underscore","backbone","router","fancybox"],function(e,t,n,r){var i=function(){new n,t.history.start(),$(".img-wrap a").fancybox({helpers:{title:{type:"inside"}}})};return{initialize:i}});
