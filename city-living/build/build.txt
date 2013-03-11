@@ -21,14 +21,17 @@ js/misc/google-code-prettify/prettify.css
 
 js/main.js
 ----------------
-js/libs/underscore/underscore-min.js
-js/libs/backbone/backbone-min.js
+js/libs/underscore/underscore-amd-min.js
+js/libs/backbone/backbone-amd-min.js
 js/text.js
 text!templates/index/indexTemplate.html
 js/views/index/IndexView.js
 text!templates/submit/submitTemplate.html
 js/views/submit/SubmitView.js
 js/models/PlacesModel.js
+js/collections/StorageCollections.js
+text!templates/realestate/realestateTemplate.html
+js/views/realestate/RealestateView.js
 js/collections/PlacesCollections.js
 js/router.js
 js/libs/jquery/jquery.fancybox.pack.js

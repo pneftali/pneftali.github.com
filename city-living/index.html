@@ -27,7 +27,14 @@
   </head>
 
   <body>
-    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=311346742298886";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     
     <style>
       .large-bg { position: fixed; }
@@ -96,7 +103,7 @@
             <a href="#" class="btn">
               <i class="icon-facebook"></i>
             </a>
-            <a href="./#submit" class="btn submit-place" rel="tooltip" title="For FREE!" data-placement="left">
+            <a href="./#/submit" class="btn submit-place" rel="tooltip" title="For FREE!" data-placement="left">
               Submit yo place!
             </a>       
             <div class="tooltip fade left in" style="top: -3.5px; left: -75px; display: block;">
@@ -148,9 +155,9 @@
 				.posted-loc i { margin-right: 3px; }
 			</style>
         <div class="clearfix places-main">
-			<div class="progress progress-indeterminate">
-				<div class="bar"></div>
-			</div>			
+    			<div class="progress progress-indeterminate">
+    				<div class="bar"></div>
+    			</div>			
         </div>  
 
         <hr class="gutter">
