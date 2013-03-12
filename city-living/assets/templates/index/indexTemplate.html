@@ -5,9 +5,9 @@
 	<a class="posted-loc" title="Location"><i class="icon-map-pin-fill"></i>&nbsp; <%= posted_location %></a>
 	<a class="posted-cat" title="Category"><i class="icon-tag"></i>&nbsp; <%= category %></a>
 	<a class="posted-type" title="Type"><i class="icon-link-3"></i>&nbsp; <%= type %></a>
-	<a class="posted-comment" title="Comments">
+	<a class="posted-comment" title="Comments" href="http://pneftali.github.com/city-living<%= url %>">
 		<i class="icon-comment"></i>&nbsp; 
-		<fb:comments-count href=http://pneftali.github.com/city-living<%= url %>></fb:comments-count>
+		<fb:comments-count href=http://pneftali.github.com/city-living<%= url %>></fb:comments-count> posts
 	</a>
 </div>
 
@@ -64,7 +64,8 @@
 	</div>
 </div><!-- end right side box -->
 </div>
-
+<!--
 <div class="pull-right">
-	<div class="fb-comments" data-href="http://pneftali.github.com/city-living<%= url %>" data-width="860" data-num-posts="2"></div>
+	<fb:comments href="http://pneftali.github.com/city-living<%= url %>" width="860" num_posts="1" order_by="reverse_time"></fb:comments>
 </div>
+-->

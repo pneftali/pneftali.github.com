@@ -7,7 +7,7 @@
 	<a class="posted-type" title="Type"><i class="icon-link-3"></i>&nbsp; <%= type %></a>
 	<a class="posted-comment" title="Comments">
 		<i class="icon-comment"></i>&nbsp; 
-		<fb:comments-count href=http://pneftali.github.com/city-living<%= url %>></fb:comments-count>
+		<fb:comments-count href=http://pneftali.github.com/city-living<%= url %>></fb:comments-count> posts
 	</a>
 </div>
 
@@ -66,5 +66,5 @@
 </div>
 
 <div class="pull-right">
-	<div class="fb-comments" data-href="http://pneftali.github.com/city-living<%= url %>" data-width="860" data-num-posts="10"></div>
+	<fb:comments href="http://pneftali.github.com/city-living<%= url %>" width="860" num_posts="10" order_by="reverse_time"></fb:comments>
 </div>

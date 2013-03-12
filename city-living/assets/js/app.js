@@ -5,7 +5,7 @@ define('app', [
 	'fancybox'
 ], function(_, Backbone, Router, fancybox){
 	
-	var initialize = function(){
+	var initialize = function(){	
 		
 		new Router();
 		Backbone.history.start();

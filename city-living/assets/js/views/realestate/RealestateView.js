@@ -34,6 +34,8 @@ define('views/realestate/RealestateView', [
 				$( '.progress' ).remove();
 
 				this.$el.html(this.template(mode_attributes[0].attributes)).hide().fadeIn();
+
+				FB.XFBML.parse();
 			
 		}
 

@@ -23,6 +23,8 @@ define('views/index/IndexView', [
 			
 			this.$el.append(this.template(model.attributes)).hide().fadeIn();
 			
+			FB.XFBML.parse();
+			
 		},
 		
 		renderComplete: function(){
@@ -30,6 +32,7 @@ define('views/index/IndexView', [
 			$( '.progress' ).remove();
 			
 		}
+
 	});
 
   return IndexView;
