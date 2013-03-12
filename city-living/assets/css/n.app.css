@@ -1,0 +1,42 @@
+/* What's hot
+------------------------- */
+  
+  /* Popover
+  *==========================================*/  
+
+  .ftd-box { width: 600px; float: left; }  
+
+  .t-headr { position: relative; margin-bottom: 10px; }
+  .t-headr h3 { display: inline; font-weight: 300; font-size: 17px; }
+  .t-navi { position: absolute; right: 0; top: 5px; }
+  .t-navi a { float: left; display: block; width: 15px; height: 15px; border: 1px solid #ACACAC; margin-left: 5px; }
+  .t-navi a:hover { cursor: pointer; }
+  .t-navi .t-sel { background: #EFEFEF; width: 20px; height: 15px; border-color: #AAA; }
+
+  .mini         { width: 97px; float: left; margin-right: 1px; padding-top: 10px; }
+  .c-box-left   { width: 600px; float: left; }
+  .c-box-right  { float: right; width: 259px; }  
+
+    .icon-clock-2:before { content: "\e13a"; }
+    .icon-camera-3:before { content: "\e144"; }
+    .icon-map-pin-fill:before { content: "\e172"; }
+    .icon-tag:before { content: "\003b"; }
+    .icon-link-3:before { content: "\e14a"; }
+    .icon-comment:before { content: "\e14e"; }
+
+  .item-wrap { margin-bottom: 30px; }
+  
+  .filter { margin-bottom: 20px; float: left; position: relative; top: -10px; }
+  .filter a { color: #888; }
+  .filter a:hover { color: #000; text-decoration: none; }
+  .filter a.selected { color: #030303; font-weight: bold; }
+  
+  /* responsive - fluid --
+  @media (min-width: 481px)
+  .container { min-width: 930px; }
+
+  @media (min-width: 1455px)
+  .container { width: 1415px; }
+  -- */
+
+  

@@ -1,0 +1,70 @@
+<div class="item-wrap clearfix">
+<div class="mini specifics">
+	<a class="posted" title="Date Posted"><i class="icon-clock-2"></i>&nbsp; <%= posted_date %></a>
+	<a class="posted-by" title="Photographer"><i class="icon-camera-3"></i>&nbsp; <%= posted_by %></a>
+	<a class="posted-loc" title="Location"><i class="icon-map-pin-fill"></i>&nbsp; <%= posted_location %></a>
+	<a class="posted-cat" title="Category"><i class="icon-tag"></i>&nbsp; <%= category %></a>
+	<a class="posted-type" title="Type"><i class="icon-link-3"></i>&nbsp; <%= type %></a>
+	<a class="posted-comment" title="Comments">
+		<i class="icon-comment"></i>&nbsp; 
+		<fb:comments-count href=http://pneftali.github.com/city-living<%= url %>></fb:comments-count>
+	</a>
+</div>
+
+<div class="ftd-box">		  
+	<div id="ftd-" class="shown">           
+		<div id="c-box-left">              
+			<div class="collage box-600 pull-left">						
+				<div class='top'>            
+					<div class="img-wrap wrap-main">
+						<a href="<%= img_path %>/<%= id %>/fbox/main-fbox-<%= id %>.jpg" rel="<%= id %>">
+							<img class="collage-main" src="<%= img_path %>/<%= id %>/main-<%= id %>.jpg">
+						</a>
+					</div>
+					<div class="img-wrap wrap-square">                  
+						<a href="<%= img_path %>/<%= id %>/fbox/img-<%= id %>-0.jpg" rel="<%= id %>">
+							<img class="collage-square" src="<%= img_path %>/<%= id %>/thumb/img-<%= id %>-0.jpg">
+						</a>
+					</div>
+					<div class="img-wrap wrap-square">
+						<a href="<%= img_path %>/<%= id %>/fbox/img-<%= id %>-1.jpg" rel="<%= id %>">
+							<img class="collage-square" src="<%= img_path %>/<%= id %>/thumb/img-<%= id %>-1.jpg">
+						</a>
+					</div>
+				</div><!-- end top -->
+
+				<div class='btm'>  
+					<div class="img-wrap wrap-square">
+						<a href="<%= img_path %>/<%= id %>/fbox/img-<%= id %>-2.jpg" rel="<%= id %>">
+							<img class="collage-square" src="<%= img_path %>/<%= id %>/thumb/img-<%= id %>-2.jpg">
+						</a>
+					</div>
+					<div class="img-wrap wrap-square">
+						<a href="<%= img_path %>/<%= id %>/fbox/img-<%= id %>-3.jpg" rel="<%= id %>">
+							<img class="collage-square" src="<%= img_path %>/<%= id %>/thumb/img-<%= id %>-3.jpg">
+						</a>          
+					</div>
+					<div class="img-wrap wrap-square">
+						<a href="<%= img_path %>/<%= id %>/fbox/img-<%= id %>-4.jpg" rel="<%= id %>">
+							<img class="collage-square" src="<%= img_path %>/<%= id %>/thumb/img-<%= id %>-4.jpg">
+						</a>               
+					</div>
+				</div><!-- end btm -->
+			</div>                  
+		</div><!-- end box-600 -->
+	</div>  
+</div><!-- end featured -->
+
+<div class="c-box-right collage">
+	<div class="info-box">
+		<div class="info-content box">
+			<h3><a href=".<%= url %>"><%= place_name %></a></h3>
+			<p><%= place_details %></p>			
+		</div>
+	</div>
+</div><!-- end right side box -->
+</div>
+
+<div class="pull-right">
+	<div class="fb-comments" data-href="http://pneftali.github.com/city-living<%= url %>" data-width="860" data-num-posts="10"></div>
+</div>
