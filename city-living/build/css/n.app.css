@@ -16,6 +16,8 @@
     .icon-map-pin-fill:before { content: "\e172"; }
     .icon-tag:before { content: "\003b"; }
     .icon-link-3:before { content: "\e14a"; }
+	.icon-comment:before { content: "\e14e"; }
+	
   .item-wrap { margin-bottom: 30px; }
   
   .filter { margin-bottom: 20px; float: left; position: relative; top: -10px; }
