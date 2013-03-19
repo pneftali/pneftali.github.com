@@ -10,26 +10,29 @@ define('views/index/IndexView', [
 		
 		initialize: function() {
 
-			var collection = this.collection;				
-			
-			this.listenTo(collection, 'add', this.render);
-			this.listenTo(collection, 'reset', this.renderComplete);
-			
-			collection.fetch();
+			this.render();
 			
 		},
 		
-		render: function( model ){		  
-			
-			this.$el.append(this.template(model.attributes)).hide().fadeIn();
+		render: function(){			  
+
+			var i,
+				items = this.collection.models;
+
+			for (i in items) {			
+				this.$el.html(this.template(items[i].attributes)).hide().fadeIn();
+			}			
 			
 			FB.XFBML.parse();
-			
+
+			this.renderComplete();
+
 		},
 		
 		renderComplete: function(){
 			
 			$( '.progress' ).remove();
+			//this.stopListening(collection);
 			
 		}
 

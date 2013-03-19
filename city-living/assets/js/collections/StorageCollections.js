@@ -3,9 +3,7 @@ define('collections/StorageCollections', [
 ], function(PlacesModel){
 	'use strict';
 	
-  	var StorageCollections = Backbone.Collection.extend({
-		model: PlacesModel		
-	});	
+  	var StorageCollections = Backbone.Collection.extend();	
 
 	return new StorageCollections;  
 });

@@ -33,7 +33,7 @@ require.config({
 */
 
 
-require(['app'], function(App){
+require(['data'], function(Data){
 
-    App.initialize();
+    Data.initialize();
 });

@@ -2,20 +2,20 @@
 define('router', [
     'views/index/IndexView',
 	'views/submit/SubmitView',
-	'views/realestate/RealestateView',
-	'collections/PlacesCollections'
-], function(IndexView, SubmitView, RealestateView, PlacesCollections) {
+	'views/realestate/RealestateView'
+], function(IndexView, SubmitView, RealestateView) {
 	'use strict';
 	
     var router = Backbone.Router.extend({
         routes: {          
             '': 'index',
+            'places': 'index',
             'real-estate/:category/:name': 'realestate',
 			'submit': 'submit'			
         },
 		
 		index: function(){
-			var view = new IndexView({collection: PlacesCollections});
+			var view = new IndexView({collection: City._PlacesCollections});			
 		},
 		
 		submit: function(){
@@ -25,7 +25,7 @@ define('router', [
 
 		realestate: function( category, name ){
 			var view = new RealestateView({
-				collection: PlacesCollections,
+				collection: City._PlacesCollections,
 				category: category,
 				name: name
 			});

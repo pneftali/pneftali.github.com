@@ -1,20 +1,14 @@
 define('app', [
-	'underscore',
-	'backbone',
-	'router',
-	'fancybox'
-], function(_, Backbone, Router, fancybox){
+	'router'
+], function(Router){
 	
+	console.log('App initialized.');
+
 	var initialize = function(){	
 		
 		new Router();
-		Backbone.history.start();
+		Backbone.history.start();		
 		
-		$(".img-wrap a").fancybox({
-				helpers : {
-				title : { type : 'inside' }
-			}            
-		});
 	};
 
 	return {

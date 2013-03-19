@@ -28,12 +28,12 @@ text!templates/index/indexTemplate.html
 js/views/index/IndexView.js
 text!templates/submit/submitTemplate.html
 js/views/submit/SubmitView.js
-js/models/PlacesModel.js
-js/collections/StorageCollections.js
 text!templates/realestate/realestateTemplate.html
 js/views/realestate/RealestateView.js
-js/collections/PlacesCollections.js
 js/router.js
 js/libs/jquery/jquery.fancybox.pack.js
-js/app.js
+js/models/PlacesModel.js
+js/collections/StorageCollections.js
+js/collections/PlacesCollections.js
+js/data.js
 js/main.js

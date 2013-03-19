@@ -1,7 +1,6 @@
 define('views/realestate/RealestateView', [
-	'collections/StorageCollections',
 	'text!templates/realestate/realestateTemplate.html'  
-], function(StorageCollections, realestateTemplate){
+], function(realestateTemplate){
 	'use strict';
 	
 	var IndexView = Backbone.View.extend({
@@ -11,25 +10,14 @@ define('views/realestate/RealestateView', [
 		
 		initialize: function() {
 
-			var collection = this.collection;				
+			this.render();
 			
-			this.listenTo(collection, 'add', this.capture);
-			this.listenTo(collection, 'reset', this.render);
-			
-			collection.fetch();
-			
-		},
-
-		capture: function( model ){
-
-			StorageCollections.push( model );
-
 		},
 		
 		render: function(){		  
 
 			var url_path 		= "/#/real-estate/" + this.options.category + "/" + this.options.name,
-				mode_attributes = StorageCollections.where( {url: url_path} );
+				mode_attributes = this.collection.where( {url: url_path} );
 
 				$( '.progress' ).remove();
 
