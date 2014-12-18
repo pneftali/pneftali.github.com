@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiDO7ZZzrtmb5d4xDByyo4I5hvesQG8CY&libraries=places"></script>
+    <script type="text/javascript">
+
+      var placeIDs = [
+        'ChIJ41bI-D6ZqTMRbdF4kulLW7s',
+        'ChIJq9Asiz6ZqTMRfXN_5KPnlnw',
+        'ChIJR6nEAT-ZqTMRViQP6DPzA7g',
+        'ChIJn2IM-z6ZqTMRT63E31n9nOc',
+        'ChIJpQnCjz6ZqTMRrqxW1OjnRYc',
+        'ChIJwdAejT6ZqTMR2thM050cw2o',
+        'ChIJIyJjwD6ZqTMR-N2uXx482mE',
+        'ChIJn2IM-z6ZqTMRzFNU5tWvaOY'
+      ];
+
+
+      var map;
+      var service;
+      
+      function initialize() {
+        
+        var mapOptions = {
+          center: { lat: 10.319241, lng: 123.90514800000005},
+          zoom: 18
+        };
+
+        map = new google.maps.Map(
+            document.getElementById('map-canvas'),
+            mapOptions
+        );
+
+        service = new google.maps.places.PlacesService(map);
+
+        google.maps.event.addListenerOnce(map, 'bounds_changed', getDetails);
+      }
+
+      // --- PERFORM SEARCH
+
+      function performSearch() {
+        var request = {
+          bounds: map.getBounds(),
+          keyword: "Sbarro - Ayala Center Cebu"
+        };
+        service.radarSearch(request, callback);
+      }
+
+      function callback(results, status) {
+        console.log(status);
+        console.log(results);
+
+        // Flame It! Burger - ChIJ41bI-D6ZqTMRbdF4kulLW7s
+        // Starbucks - ChIJq9Asiz6ZqTMRfXN_5KPnlnw
+        // Harbour City Dimsum House - ChIJR6nEAT-ZqTMRViQP6DPzA7g
+        // Gustavian - ChIJn2IM-z6ZqTMRT63E31n9nOc
+        // Kaona Grill - ChIJpQnCjz6ZqTMRrqxW1OjnRYc
+        // Bigby's Cafe - ChIJD2Zuqz-ZqTMRQpYfx0kp3Ik
+        // Tater's Enterprises Incorporated - ChIJIyJjwD6ZqTMR-N2uXx482mE
+        // Sbarro - Ayala Center Cebu - ChIJn2IM-z6ZqTMRzFNU5tWvaOY
+
+        for (var i = 0, result; result = results[i]; i++) {
+          service.getDetails(result, function(result, status) {
+            console.log(result);
+          });
+        }
+      }
+
+      // --- end PERFORM SEARCH
+
+
+
+      // --- SET MARKS
+
+      function getDetails() {
+        var request;
+
+        for (var i = 0; i < placeIDs.length; i++) {
+          request = {
+            placeId: placeIDs[i]
+          };
+
+          service.getDetails(request, function(result, status) {
+            setMarker(result);
+          });
+        };
+      }
+
+      function setMarker(place) {
+        var image = {
+          url: place.icon,
+          scaledSize: new google.maps.Size(18, 18)
+        };
+
+        new google.maps.Marker({
+          position: place.geometry.location,
+          map: map,
+          title: place.name
+        });
+      }
+
+      // --- end SET MARKS
+
+
+
+      // --- SEARCH NEARBY
+
+      function searchNearby() {
+        var request = {
+          location: new google.maps.LatLng(10.319241, 123.90514800000005),
+          radius: 1000,
+          types: ['restaurant', 'food', 'coffee', 'bar']
+        };
+
+        service.nearbySearch(request, function(results, status, pagination) {
+          console.log(results);
+          for (var i = 0, result; result = results[i]; i++) {
+            setMarker(result);
+          }
+        });
+      }
+
+      // --- end SEARCH NEARBY
+      
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+  </body>
+</html>
